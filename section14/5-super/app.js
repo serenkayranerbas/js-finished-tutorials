@@ -5,7 +5,7 @@ class User {
   }
   login() {
     console.log(`${this.username} giriş yaptı.`);
-    return this; 
+    return this;
     // return `${this.username} giriş yaptı.`
   }
   logout() {
@@ -14,9 +14,9 @@ class User {
   }
 }
 class Admin extends User {
-  constructor(username, email) {
-    this.username = username;
-    this.email = email;
+  constructor(username, email,title) {
+    super(username,email);
+    this.title=title;
   }
   deleteUser(userArrived) {
     console.log(
@@ -27,9 +27,6 @@ class Admin extends User {
 }
 const userOne = new User("Seren", "seren@gmail.com");
 const userTwo = new User("Kayra", "kayra@gmail.com");
-const userThree = new Admin("Öykü", "oyku@gmail.com");
+const userThree = new Admin("Öykü", "oyku@gmail.com",'Textile');
 
-let users = [userOne, userTwo, userThree];
-userThree.deleteUser(userTwo);
-console.log(userOne, userTwo, userThree);
-console.log(users);
+console.log(userThree);

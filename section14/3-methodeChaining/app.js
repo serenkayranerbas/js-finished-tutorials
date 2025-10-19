@@ -18,3 +18,5 @@ const userOne = new User("Seren", "seren@gmail.com");
 const userTwo = new User("Kayra", "kayra@gmail.com");
 // console.log(userOne.login(), userTwo.logout());
 userOne.login().logout();
+userOne.login().logout().login();
+//return this koymamızın en temel nedeni, aynı nesne üzerinden art arda (zincirleme) metotlar çalıştırabilmek
