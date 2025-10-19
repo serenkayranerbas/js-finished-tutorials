@@ -1,0 +1,24 @@
+// const a = (callBack) => {
+//   let yas = 40;
+//   callBack(yas);
+// };
+// a(function (value) {
+//   console.log(value);
+// });
+
+
+let ogrencilerim=['can','hakan','elif','tuba'];
+ogrencilerim.forEach(function()
+{
+    console.log("Selam");
+})
+
+ogrencilerim.forEach(function(kisi,index)
+{
+    console.log(kisi,index);
+})
+
+const ogrenci=(kisi,index)=>{
+    console.log(`${index} - ${kisi}`);
+}
+ogrencilerim.forEach(ogrenci);
